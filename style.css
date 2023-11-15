@@ -390,7 +390,7 @@ body{
     display:none;
     flex-direction: row;
     position:absolute;
-    bottom:5%;
+    bottom:0%;
     left:0%;   
 }
 
