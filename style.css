@@ -202,7 +202,9 @@ body{
   .questionContainer{
     display:none;
     justify-content:center;
+    align-items: center;
     flex-direction:column;
+    padding-top: 5%;
   }
 
   .hmQuestion{
@@ -239,6 +241,10 @@ body{
     width:60px;
     height:60px;
     border:none;
+  }
+
+  .robotSitting{
+    width:30%;
   }
 
   /* 3rd Screen with Beginning of Cover Letter */
