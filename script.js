@@ -63,6 +63,9 @@ let link1 = document.querySelector(".link1");
 let link2 = document.querySelector(".link2");
 let link3 = document.querySelector(".link3");
 let featLiveLink = document.querySelector(".featLiveLink");
+let imgBox3 = document.querySelector(".imgBox3");
+let imgBox2 = document.querySelector(".imgBox2");
+
 console.log(rightArrow);
 console.log(draggableElements);
 
@@ -107,10 +110,16 @@ let p3Live = "https://community-garden.onrender.com/";
 window.addEventListener('load', function () {
     setTimeout( function() {
         speechBubble.style.visibility = 'visible';
-    }, 900);
+    }, 500);
+    setTimeout( function() {
+        imgBox2.style.visibility = 'visible';
+    }, 1500);
+    setTimeout( function() {
+        imgBox3.style.visibility = 'visible';
+    }, 2500);
     setTimeout( function() {
         blinkBox.style.visibility = 'visible';
-    }, 2000);
+    }, 3500);
 });
 
 
