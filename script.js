@@ -79,7 +79,7 @@ button4.className="button4";
 
 //Project Details (Title, Description, Image, Links)
 let p1Title="Interactive Cover Letter";
-let p1Description="This project is my attempt to stand out to potential employers.  While I will continue to submit cover letters, for someone who wants a break from the usual, they can click the link and learn a little about me, while also seeing my work in action.  This was also a chance for me to practice DOM manipulation and CSS animations. The biggest challenges in this project have been getting the Drag and Drop feature to behave exactly as I want it and also the responsiveness (which I am still working on)."
+let p1Description="This project is my attempt to stand out to potential employers.  While I will continue to submit cover letters, for someone who wants a break from the usual, they can click the link and learn a little about me, while also seeing my work in action.  This was also a chance for me to practice DOM manipulation and CSS animations. The biggest challenges in this project have been getting the Drag and Drop feature to behave exactly as I want it and also the responsiveness. This project page was inspired by how Home Depot displays their Core Values and I really enjoyed coming up with the JS code to switch back and forth between projects."
 let p1Image="./imgs/cvScreen.png";
 let p1link1="https://github.com/PBadila/coverLetterHomeDepot";
 let p1link1Inner="GitHub"
@@ -105,6 +105,12 @@ let p3link3="https://community-garden-api.onrender.com/";
 let p3link3Inner="API"
 let p3Live = "https://community-garden.onrender.com/";
 
+let p4Title="DOS Card Counter";
+let p4Description="An app designed for a statistics class to use to count cards in the game of DOS. Probability calculation capability will be added soon. For now, you can click on the card color, then number, and a tally will be kept. Created using JavaScript, HTML, CSS.";
+let p4Image="./imgs/dosGame.png";
+let p4link1="https://github.com/PBadila/dosCardCounter";
+let p4Live="https://doscardcounter.onrender.com/";
+let p4linkInner="GitHub";
 
 // Initial speech bubble and click here for Introduction Page
 window.addEventListener('load', function () {
@@ -330,8 +336,8 @@ rightArrow.addEventListener('click', () => {
             slot2Title.innerText=p3Title;
             slot2Img.src=p3Image;
             //switching the 3rd box
-            slot3Title.innerText=p1Title;
-            slot3Img.src=p1Image;
+            slot3Title.innerText=p4Title;
+            slot3Img.src=p4Image;
             count++;
             break;
         case 1:
@@ -350,14 +356,42 @@ rightArrow.addEventListener('click', () => {
             link3.innerText=p3link3Inner;
 
             //switching the 2nd box
-            slot2Title.innerText=p1Title;
-            slot2Img.src=p1Image;
+            slot2Title.innerText=p4Title;
+            slot2Img.src=p4Image;
             //switching the 3rd box
-            slot3Title.innerText=p2Title;
-            slot3Img.src=p2Image;
+            slot3Title.innerText=p1Title;
+            slot3Img.src=p1Image;
             count++;
             break;
-        case 2:
+
+            case 2:
+                //switching the feature
+                console.log("Count: "+count)
+                miniTitleFeat.innerText=p4Title;
+                displayProject.src=p4Image;
+                projectTitle.innerText=p4Title;
+                projectDescription.innerText=p4Description;
+                featLiveLink.setAttribute("href",p4Live);
+                link1.setAttribute("href",p4link1);
+                link1.innerText=p4linkInner;
+                link2.setAttribute("href","#");
+                link2.innerText="";
+                link3.setAttribute("href","#");
+                link3.innerText="";
+                
+               
+                //switching the 2nd box
+                slot2Title.innerText=p1Title;
+                slot2Img.src=p1Image;
+                //switching the 3rd box
+                slot3Title.innerText=p2Title;
+                slot3Img.src=p2Image;
+                count++;
+            
+                break;
+    
+         
+        case 3:
             //switching the feature
             console.log("Count: "+count)
             miniTitleFeat.innerText=p1Title;
@@ -392,24 +426,24 @@ leftArrow.addEventListener('click', () => {
         case 0:
             //switching the feature
             console.log("Count: "+count)
-            miniTitleFeat.innerText=p3Title;
-            displayProject.src=p3Image;
-            projectTitle.innerText=p3Title;
-            projectDescription.innerText=p3Description;
-            featLiveLink.setAttribute("href",p3Live);
-            link1.setAttribute("href",p3link1);
-            link2.setAttribute("href",p3link2);
-            link3.setAttribute("href",p3link3);
-            link1.innerText=p3link1Inner;
-            link2.innerText=p3link2Inner;
-            link3.innerText=p3link3Inner;
+            miniTitleFeat.innerText=p4Title;
+            displayProject.src=p4Image;
+            projectTitle.innerText=p4Title;
+            projectDescription.innerText=p4Description;
+            featLiveLink.setAttribute("href",p4Live);
+            link1.setAttribute("href",p4link1);
+            link2.setAttribute("href","");
+            link3.setAttribute("href","");
+            link1.innerText=p4linkInner;
+            link2.innerText="";
+            link3.innerText="";
             //switching the 2nd box
             slot2Title.innerText=p1Title;
             slot2Img.src=p1Image;
             //switching the 3rd box
             slot3Title.innerText=p2Title;
             slot3Img.src=p2Image;
-            count=2;
+            count=3;
             break;
         case 1:
             //switching the feature
@@ -420,10 +454,10 @@ leftArrow.addEventListener('click', () => {
             projectDescription.innerText=p1Description;
             featLiveLink.setAttribute("href",p1Live);
             link1.setAttribute("href",p1link1);
-            link1.innerText=p1link1Inner;
-            link2.setAttribute("href","#");
+            link2.setAttribute("href","");
+            link3.setAttribute("href","");
+            link1.innerText=p3link1Inner;
             link2.innerText="";
-            link3.setAttribute("href","#");
             link3.innerText="";
             //switching the 2nd box
             slot2Title.innerText=p2Title;
@@ -435,7 +469,6 @@ leftArrow.addEventListener('click', () => {
             break;
         case 2:
             //switching the feature
-            
             console.log("Count: "+count)
             miniTitleFeat.innerText=p2Title;
             displayProject.src=p2Image;
@@ -443,14 +476,37 @@ leftArrow.addEventListener('click', () => {
             projectDescription.innerText=p2Description;
             featLiveLink.setAttribute("href",p2Live);
             link1.setAttribute("href",p2link1);
-            link2.setAttribute("href",p2link2);
             link1.innerText=p2link1Inner;
+            link2.setAttribute("href",p2link2);
             link2.innerText=p2link2Inner;
             link3.setAttribute("href","#");
             link3.innerText="";
             //switching the 2nd box
             slot2Title.innerText=p3Title;
             slot2Img.src=p3Image;
+            //switching the 3rd box
+            slot3Title.innerText=p4Title;
+            slot3Img.src=p4Image;
+            count--;
+            break;
+        case 3:
+            //switching the feature
+            
+            console.log("Count: "+count)
+            miniTitleFeat.innerText=p3Title;
+            displayProject.src=p3Image;
+            projectTitle.innerText=p3Title;
+            projectDescription.innerText=p3Description;
+            featLiveLink.setAttribute("href",p3Live);
+            link1.setAttribute("href",p3link1);
+            link2.setAttribute("href",p3link2);
+            link1.innerText=p3link1Inner;
+            link2.innerText=p3link2Inner;
+            link3.setAttribute("href",p3link3);
+            link3.innerText=p3link3Inner;
+            //switching the 2nd box
+            slot2Title.innerText=p4Title;
+            slot2Img.src=p4Image;
             //switching the 3rd box
             slot3Title.innerText=p1Title;
             slot3Img.src=p1Image;
