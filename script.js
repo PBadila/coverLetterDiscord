@@ -718,8 +718,8 @@ leftArrow.addEventListener('click', () => {
 })
 
 codeImgLink1.addEventListener('click', ()=> {
-    projectImgPopUp.style.display="flex";
-    projCodeImg.src=p5linkImgs[0];
+    // projectImgPopUp.style.display="flex";
+    // projCodeImg.src=p5linkImgs[0];
     
 })
 
