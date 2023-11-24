@@ -65,6 +65,12 @@ let link3 = document.querySelector(".link3");
 let featLiveLink = document.querySelector(".featLiveLink");
 let imgBox3 = document.querySelector(".imgBox3");
 let imgBox2 = document.querySelector(".imgBox2");
+let codeImgLink1=document.querySelector(".codeImgLink1");
+let codeImgLink2=document.querySelector(".codeImgLink2");
+let projectImgPopUp=document.querySelector(".projectImgPopUp");
+let projCodeImg = document.querySelector(".projCodeImg");
+let rightProjImgArrow = document.querySelector(".rightProjImgArrow");
+let lefttProjImgArrow = document.querySelector(".leftProjImgArrow");
 
 console.log(rightArrow);
 console.log(draggableElements);
@@ -73,6 +79,7 @@ let managerName;
 let count;
 let changeName = 0;
 let button6Click = 0;
+let projCodeImgArray = [];
 
 const button4 = document.createElement("button");
 button4.className="button4";
@@ -111,6 +118,31 @@ let p4Image="./imgs/dosGame.png";
 let p4link1="https://github.com/PBadila/dosCardCounter";
 let p4Live="https://doscardcounter.onrender.com/";
 let p4linkInner="GitHub";
+
+let p5Title="Squarespace Customization";
+let p5Description="This was a group project.  Actually, my wonderful Son, who is a 3D Artist and a phenomenal Coder, was the designer and coder for this site.  My role was to write the JavaScript code for the About Me Page buttons and integrate it into the Squarespace site.  This required me to actually learn how to use JQuery.  Now the About Me buttons are clickable and the appropriate divs appear and disappear.";
+let p5Image="./imgs/solSiteMain.png";
+let p5Live="https://www.cantkillmysol.com/about";
+let p5link1Inner="Code Snippets";
+let codeImgNum = 2;
+let p5link1Img="./imgs/solSiteCode.png";
+let p5link2Img="./imgs/solSiteCode2.png";
+let p5linkImgs = ["./imgs/solSiteCode.png", "./imgs/solSiteCode2.png"];
+
+let p6Title="Homeschool Division";
+let p6Description="I homeschool my children and I designed this site to help my girls practice the concept of division. For my final bootcamp solo project, I used REACT to design a homeschool app.  I am re-creating that (but better and more elaborate now that I have a better understanding of REACT) and this division practice will be a part of the final Homeschool REACT app. This was created with HTML, CSS, and JavaScript, as I focus on writing cleaner, re-usable code."
+let p6Image="./imgs/ldProjectCode1.png";
+let p6link1Inner="Code Snippets";
+let p6Live="https://homeschooldivision.onrender.com/";
+let p6linkImgs = ["./imgs/solSiteCode.png", "./imgs/solSiteCode2.png"];
+
+let p7Title="Green Squares Challenge";
+let p7Description="I was reading an article on Free Code Camp entitled 'How to Build Successful Projects as a Junior Developer' and it mentioned this coding challenge, so I decided to try it.  Setting up the squares and getting them to turn green was easy.  Getting them to de-colorize with a time lapse in between proved to be a challenge that led me to a deeper understanding of the asynchronicity of the setTimeout function and how to work around it."
+let p7Image="./imgs/greenSquares.png";
+let p7link1Inner="Code Snippets";
+let p7Live="https://greensquares.onrender.com/";
+let p7LinkImgs=["./imgs/gs1.png","./imgs/gs2.png"];
+
 
 // Initial speech bubble and click here for Introduction Page
 window.addEventListener('load', function () {
@@ -317,6 +349,7 @@ rightArrow.addEventListener('click', () => {
 
     
     switch(count){
+        //Project 2 is now the feature
         case 0:
             //switching the feature
             console.log("Count: "+count)
@@ -340,6 +373,7 @@ rightArrow.addEventListener('click', () => {
             slot3Img.src=p4Image;
             count++;
             break;
+        //Project 3 is now the feature
         case 1:
             //switching the feature
             console.log("Count: "+count)
@@ -359,11 +393,11 @@ rightArrow.addEventListener('click', () => {
             slot2Title.innerText=p4Title;
             slot2Img.src=p4Image;
             //switching the 3rd box
-            slot3Title.innerText=p1Title;
-            slot3Img.src=p1Image;
+            slot3Title.innerText=p5Title;
+            slot3Img.src=p5Image;
             count++;
             break;
-
+             //Project 4 is now the feature
             case 2:
                 //switching the feature
                 console.log("Count: "+count)
@@ -381,17 +415,107 @@ rightArrow.addEventListener('click', () => {
                 
                
                 //switching the 2nd box
-                slot2Title.innerText=p1Title;
-                slot2Img.src=p1Image;
+                slot2Title.innerText=p5Title;
+                slot2Img.src=p5Image;
                 //switching the 3rd box
-                slot3Title.innerText=p2Title;
-                slot3Img.src=p2Image;
+                slot3Title.innerText=p6Title;
+                slot3Img.src=p6Image;
                 count++;
             
                 break;
+             //Project 5 is now the feature
+            case 3:
+                 //switching the feature
+                console.log("Count: "+count)
+                miniTitleFeat.innerText=p5Title;
+                displayProject.src=p5Image;
+                projectTitle.innerText=p5Title;
+                projectDescription.innerText=p5Description;
+                featLiveLink.setAttribute("href",p5Live);
+                link1.setAttribute("href","");
+                link1.innerText="";
+                link2.setAttribute("href","");
+                link2.innerText="";
+                link3.setAttribute("href","");
+                link3.innerText="";
+                codeImgLink1.innerText=p5link1Inner;
+                projCodeImgArray=p5linkImgs;
+                
+                    
+                   
+                //switching the 2nd box
+                slot2Title.innerText=p6Title;
+                slot2Img.src=p6Image;
+                //switching the 3rd box
+                slot3Title.innerText=p7Title;
+                slot3Img.src=p7Image;
+                count++;
+                
+                break;
+
+            //Project 6 is now the feature
+            case 4:
+                //switching the feature
+                console.log("Count: "+count)
+                miniTitleFeat.innerText=p6Title;
+                displayProject.src=p6Image;
+                projectTitle.innerText=p6Title;
+                projectDescription.innerText=p6Description;
+                featLiveLink.setAttribute("href",p6Live);
+                link1.setAttribute("href","");
+                link1.innerText="";
+                link2.setAttribute("href","");
+                link2.innerText="";
+                link3.setAttribute("href","");
+                link3.innerText="";
+                codeImgLink1.innerText=p6link1Inner;
+                projCodeImgArray=p5linkImgs;
+                
+                
+                
+            //switching the 2nd box
+            slot2Title.innerText=p7Title;
+            slot2Img.src=p7Image;
+            //switching the 3rd box
+            slot3Title.innerText=p1Title;
+            slot3Img.src=p1Image;
+            count++;
+            
+            break;
+
+
+        //Project 7 is now the feature
+        case 5:
+            //switching the feature
+            console.log("Count: "+count)
+            miniTitleFeat.innerText=p7Title;
+            displayProject.src=p7Image;
+            projectTitle.innerText=p7Title;
+            projectDescription.innerText=p7Description;
+            featLiveLink.setAttribute("href",p7Live);
+            link1.setAttribute("href","");
+            link1.innerText="";
+            link2.setAttribute("href","");
+            link2.innerText="";
+            link3.setAttribute("href","");
+            link3.innerText="";
+            codeImgLink1.innerText=p7link1Inner;
+            projCodeImgArray=p7LinkImgs;
+            
+            
+            
+        //switching the 2nd box
+        slot2Title.innerText=p1Title;
+        slot2Img.src=p1Image;
+        //switching the 3rd box
+        slot3Title.innerText=p2Title;
+        slot3Img.src=p2Image;
+        count++;
+        
+        break;
     
-         
-        case 3:
+        //back to project 1     
+        case 6:
             //switching the feature
             console.log("Count: "+count)
             miniTitleFeat.innerText=p1Title;
@@ -400,19 +524,19 @@ rightArrow.addEventListener('click', () => {
             projectDescription.innerText=p1Description;
             featLiveLink.setAttribute("href",p1Live);
             link1.setAttribute("href",p1link1);
+            link2.setAttribute("href","");
             link1.innerText=p1link1Inner;
-            link2.setAttribute("href","#");
             link2.innerText="";
             link3.setAttribute("href","#");
             link3.innerText="";
             
            
             //switching the 2nd box
-            slot2Title.innerText=p2Title;
-            slot2Img.src=p2Image;
+            slot2Title.innerText=p4Title;
+            slot2Img.src=p4Image;
             //switching the 3rd box
-            slot3Title.innerText=p3Title;
-            slot3Img.src=p3Image;
+            slot3Title.innerText=p5Title;
+            slot3Img.src=p5Image;
             count=0;
         
             break;
@@ -426,58 +550,134 @@ leftArrow.addEventListener('click', () => {
         case 0:
             //switching the feature
             console.log("Count: "+count)
-            miniTitleFeat.innerText=p4Title;
-            displayProject.src=p4Image;
-            projectTitle.innerText=p4Title;
-            projectDescription.innerText=p4Description;
-            featLiveLink.setAttribute("href",p4Live);
-            link1.setAttribute("href",p4link1);
+            miniTitleFeat.innerText=p7Title;
+            displayProject.src=p7Image;
+            projectTitle.innerText=p7Title;
+            projectDescription.innerText=p7Description;
+            featLiveLink.setAttribute("href",p7Live);
+            link1.setAttribute("href","");
             link2.setAttribute("href","");
             link3.setAttribute("href","");
-            link1.innerText=p4linkInner;
+            link1.innerText="";
             link2.innerText="";
             link3.innerText="";
+            codeImgLink1.innerText=p7link1Inner;
+            projCodeImgArray=p7LinkImgs;
+
             //switching the 2nd box
             slot2Title.innerText=p1Title;
             slot2Img.src=p1Image;
             //switching the 3rd box
             slot3Title.innerText=p2Title;
             slot3Img.src=p2Image;
-            count=3;
+            count=6;
             break;
-        case 1:
+        case 6:
             //switching the feature
             console.log("Count: "+count)
-            miniTitleFeat.innerText=p1Title;
-            displayProject.src=p1Image;
-            projectTitle.innerText=p1Title;
-            projectDescription.innerText=p1Description;
-            featLiveLink.setAttribute("href",p1Live);
-            link1.setAttribute("href",p1link1);
+            miniTitleFeat.innerText=p6Title;
+            displayProject.src=p6Image;
+            projectTitle.innerText=p6Title;
+            projectDescription.innerText=p6Description;
+            featLiveLink.setAttribute("href",p6Live);
+            link1.setAttribute("href","");
             link2.setAttribute("href","");
             link3.setAttribute("href","");
-            link1.innerText=p3link1Inner;
+            link1.innerText="";
             link2.innerText="";
             link3.innerText="";
+            codeImgLink1.innerText=p6link1Inner;
+            projCodeImgArray=p6linkImgs;
             //switching the 2nd box
-            slot2Title.innerText=p2Title;
-            slot2Img.src=p2Image;
+            slot2Title.innerText=p7Title;
+            slot2Img.src=p7Image;
             //switching the 3rd box
-            slot3Title.innerText=p3Title;
-            slot3Img.src=p3Image;
+            slot3Title.innerText=p1Title;
+            slot3Img.src=p1Image;
+            count--;
+            break;
+        case 5:
+            //switching the feature
+            console.log("Count: "+count)
+            miniTitleFeat.innerText=p5Title;
+            displayProject.src=p5Image;
+            projectTitle.innerText=p5Title;
+            projectDescription.innerText=p5Description;
+            featLiveLink.setAttribute("href",p5Live);
+            link1.setAttribute("href","");
+            link1.innerText="";
+            link2.setAttribute("href","");
+            link2.innerText="";
+            link3.setAttribute("href","#");
+            link3.innerText="";
+            codeImgLink1.innerText=p5link1Inner;
+            projCodeImgArray=p5linkImgs;
+            //switching the 2nd box
+            slot2Title.innerText=p6Title;
+            slot2Img.src=p6Image;
+            //switching the 3rd box
+            slot3Title.innerText=p7Title;
+            slot3Img.src=p7Image;
+            count--;
+            break;
+        case 4:
+            //switching the feature
+            
+            console.log("Count: "+count)
+            miniTitleFeat.innerText=p4Title;
+            displayProject.src=p4Image;
+            projectTitle.innerText=p4Title;
+            projectDescription.innerText=p4Description;
+            featLiveLink.setAttribute("href",p4Live);
+            link1.setAttribute("href","");
+            link2.setAttribute("href","");
+            link1.innerText="";
+            link2.innerText="";
+            link3.setAttribute("href","");
+            link3.innerText="";
+            //switching the 2nd box
+            slot2Title.innerText=p5Title;
+            slot2Img.src=p5Image;
+            //switching the 3rd box
+            slot3Title.innerText=p6Title;
+            slot3Img.src=p6Image;
+            count--;
+            break;
+
+        case 3:
+            //switching the feature
+                
+            console.log("Count: "+count)
+            miniTitleFeat.innerText=p3Title;
+            displayProject.src=p3Image;
+            projectTitle.innerText=p3Title;                
+            projectDescription.innerText=p3Description;
+            featLiveLink.setAttribute("href",p3Live);
+            link1.setAttribute("href",p3link1);
+            link2.setAttribute("href",p3link2);
+            link3.setAttribute("href",p3link3);
+            link1.innerText=p3link1Inner;
+            link2.innerText=p3link2Inner;
+            link3.innerText=p3link3Inner;
+            //switching the 2nd box
+            slot2Title.innerText=p4Title;
+            slot2Img.src=p4Image;
+            //switching the 3rd box
+            slot3Title.innerText=p5Title;
+            slot3Img.src=p5Image;
             count--;
             break;
         case 2:
             //switching the feature
+                
             console.log("Count: "+count)
             miniTitleFeat.innerText=p2Title;
             displayProject.src=p2Image;
-            projectTitle.innerText=p2Title;
+            projectTitle.innerText=p2Title;                
             projectDescription.innerText=p2Description;
-            featLiveLink.setAttribute("href",p2Live);
             link1.setAttribute("href",p2link1);
-            link1.innerText=p2link1Inner;
             link2.setAttribute("href",p2link2);
+            link1.innerText=p2link1Inner;
             link2.innerText=p2link2Inner;
             link3.setAttribute("href","#");
             link3.innerText="";
@@ -489,31 +689,55 @@ leftArrow.addEventListener('click', () => {
             slot3Img.src=p4Image;
             count--;
             break;
-        case 3:
-            //switching the feature
-            
-            console.log("Count: "+count)
-            miniTitleFeat.innerText=p3Title;
-            displayProject.src=p3Image;
-            projectTitle.innerText=p3Title;
-            projectDescription.innerText=p3Description;
-            featLiveLink.setAttribute("href",p3Live);
-            link1.setAttribute("href",p3link1);
-            link2.setAttribute("href",p3link2);
-            link1.innerText=p3link1Inner;
-            link2.innerText=p3link2Inner;
-            link3.setAttribute("href",p3link3);
-            link3.innerText=p3link3Inner;
-            //switching the 2nd box
-            slot2Title.innerText=p4Title;
-            slot2Img.src=p4Image;
-            //switching the 3rd box
-            slot3Title.innerText=p1Title;
-            slot3Img.src=p1Image;
-            count--;
-            break;
 
+            case 1:
+                //switching the feature
+                    
+                console.log("Count: "+count)
+                miniTitleFeat.innerText=p1Title;
+                displayProject.src=p1Image;
+                projectTitle.innerText=p1Title;                
+                projectDescription.innerText=p1Description;
+                featLiveLink.setAttribute("href",p1Live);
+                link1.setAttribute("href",p1link1);
+                link2.setAttribute("href","");
+                link1.innerText=p1link1Inner;
+                link2.innerText="";
+                link3.setAttribute("href","#");
+                link3.innerText="";
+                //switching the 2nd box
+                slot2Title.innerText=p2Title;
+                slot2Img.src=p2Image;
+                //switching the 3rd box
+                slot3Title.innerText=p3Title;
+                slot3Img.src=p3Image;
+                count--;
+                break;
+      
     }
+})
+
+codeImgLink1.addEventListener('click', ()=> {
+    projectImgPopUp.style.display="flex";
+    projCodeImg.src=p5linkImgs[0];
+    
+})
+
+rightProjImgArrow.addEventListener('click', () =>{
+    let currentImg=0;
+    console.log(projCodeImgArray.length-1)
+    for(i=0; i=projCodeImgArray.length -1; i++){
+        if(projCodeImg.src==projCodeImgArray[i]){
+            currentImg=i;
+        }
+    }
+           
+    if(currentImg != projCodeImgArray.length-1){
+    projCodeImg.src=projCodeImgArray[i+1]
+    }else{
+        projCodeImg.src = projCodeImgArray[0];
+    }
+
 })
 
 button5.addEventListener('click', () =>{
