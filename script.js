@@ -70,9 +70,10 @@ let codeImgLink2=document.querySelector(".codeImgLink2");
 let projectImgPopUp=document.querySelector(".projectImgPopUp");
 let projCodeImg = document.querySelector(".projCodeImg");
 let rightProjImgArrow = document.querySelector(".rightProjImgArrow");
-let lefttProjImgArrow = document.querySelector(".leftProjImgArrow");
+let leftProjImgArrow = document.querySelector(".leftProjImgArrow");
+let exitCodeImg = document.querySelector(".exitCodeImg");
 
-console.log(rightArrow);
+console.log(exitCodeImg);
 console.log(draggableElements);
 
 let managerName;
@@ -80,6 +81,7 @@ let count;
 let changeName = 0;
 let button6Click = 0;
 let projCodeImgArray = [];
+let projNumber = 0;
 
 const button4 = document.createElement("button");
 button4.className="button4";
@@ -134,7 +136,7 @@ let p6Description="I homeschool my children and I designed this site to help my 
 let p6Image="./imgs/ldProjectCode1.png";
 let p6link1Inner="Code Snippets";
 let p6Live="https://homeschooldivision.onrender.com/";
-let p6linkImgs = ["./imgs/solSiteCode.png", "./imgs/solSiteCode2.png"];
+let p6linkImgs = ["./imgs/divSS3.png","./imgs/divSS4.png","./imgs/divSS5.png"];
 
 let p7Title="Green Squares Challenge";
 let p7Description="I was reading an article on Free Code Camp entitled 'How to Build Successful Projects as a Junior Developer' and it mentioned this coding challenge, so I decided to try it.  Setting up the squares and getting them to turn green was easy.  Getting them to de-colorize with a time lapse in between proved to be a challenge that led me to a deeper understanding of the asynchronicity of the setTimeout function and how to work around it."
@@ -364,6 +366,7 @@ rightArrow.addEventListener('click', () => {
             link2.innerText=p2link2Inner;
             link3.setAttribute("href","#");
             link3.innerText="";
+            codeImgLink1.innerText="";
 
             //switching the 2nd box
             slot2Title.innerText=p3Title;
@@ -388,6 +391,7 @@ rightArrow.addEventListener('click', () => {
             link1.innerText=p3link1Inner;
             link2.innerText=p3link2Inner;
             link3.innerText=p3link3Inner;
+            codeImgLink1.innerText="";
 
             //switching the 2nd box
             slot2Title.innerText=p4Title;
@@ -412,6 +416,7 @@ rightArrow.addEventListener('click', () => {
                 link2.innerText="";
                 link3.setAttribute("href","#");
                 link3.innerText="";
+                codeImgLink1.innerText="";
                 
                
                 //switching the 2nd box
@@ -469,7 +474,7 @@ rightArrow.addEventListener('click', () => {
                 link3.setAttribute("href","");
                 link3.innerText="";
                 codeImgLink1.innerText=p6link1Inner;
-                projCodeImgArray=p5linkImgs;
+                projCodeImgArray=p6linkImgs;
                 
                 
                 
@@ -529,7 +534,7 @@ rightArrow.addEventListener('click', () => {
             link2.innerText="";
             link3.setAttribute("href","#");
             link3.innerText="";
-            
+            codeImgLink1.innerText="";
            
             //switching the 2nd box
             slot2Title.innerText=p4Title;
@@ -635,6 +640,7 @@ leftArrow.addEventListener('click', () => {
             link2.innerText="";
             link3.setAttribute("href","");
             link3.innerText="";
+            codeImgLink1.innerText="";
             //switching the 2nd box
             slot2Title.innerText=p5Title;
             slot2Img.src=p5Image;
@@ -659,6 +665,7 @@ leftArrow.addEventListener('click', () => {
             link1.innerText=p3link1Inner;
             link2.innerText=p3link2Inner;
             link3.innerText=p3link3Inner;
+            codeImgLink1.innerText="";
             //switching the 2nd box
             slot2Title.innerText=p4Title;
             slot2Img.src=p4Image;
@@ -681,6 +688,7 @@ leftArrow.addEventListener('click', () => {
             link2.innerText=p2link2Inner;
             link3.setAttribute("href","#");
             link3.innerText="";
+            codeImgLink1.innerText="";
             //switching the 2nd box
             slot2Title.innerText=p3Title;
             slot2Img.src=p3Image;
@@ -705,6 +713,7 @@ leftArrow.addEventListener('click', () => {
                 link2.innerText="";
                 link3.setAttribute("href","#");
                 link3.innerText="";
+                codeImgLink1.innerText="";
                 //switching the 2nd box
                 slot2Title.innerText=p2Title;
                 slot2Img.src=p2Image;
@@ -718,26 +727,52 @@ leftArrow.addEventListener('click', () => {
 })
 
 codeImgLink1.addEventListener('click', ()=> {
-    // projectImgPopUp.style.display="flex";
-    // projCodeImg.src=p5linkImgs[0];
+    console.log("imgs should be visible");
+    projectImgPopUp.style.display="flex";
+    projCodeImg.src=projCodeImgArray[0];
+    projNumber=0;
+    
     
 })
 
+exitCodeImg.addEventListener('click' , () => {
+    projectImgPopUp.style.display="none";
+})
+
+
+
 rightProjImgArrow.addEventListener('click', () =>{
-    let currentImg=0;
-    console.log(projCodeImgArray.length-1)
-    for(i=0; i=projCodeImgArray.length -1; i++){
-        if(projCodeImg.src==projCodeImgArray[i]){
-            currentImg=i;
-        }
-    }
-           
-    if(currentImg != projCodeImgArray.length-1){
-    projCodeImg.src=projCodeImgArray[i+1]
+    // let currentImg=0;
+    // console.log("right button through array");
+    // console.log("This is project img array: "+ projCodeImgArray);
+    // console.log("array length type: "+ typeof(projCodeImgArray.length));
+    // console.log(projCodeImgArray.length - 1);
+    // console.log("projCodeImg.src = "+ projCodeImg.src);
+
+    if(projNumber < (projCodeImgArray.length-1)){
+        projCodeImg.src=projCodeImgArray[projNumber + 1];
+        projNumber ++;
     }else{
         projCodeImg.src = projCodeImgArray[0];
+        projNumber = 0;
     }
+})
 
+leftProjImgArrow.addEventListener('click', () =>{
+    // let currentImg=0;
+    // console.log("right button through array");
+    // console.log("This is project img array: "+ projCodeImgArray);
+    // console.log("array length type: "+ typeof(projCodeImgArray.length));
+    // console.log(projCodeImgArray.length - 1);
+    // console.log("projCodeImg.src = "+ projCodeImg.src);
+
+    if(projNumber > 0){
+        projCodeImg.src=projCodeImgArray[projNumber - 1];
+        projNumber --;
+    }else{
+        projCodeImg.src = projCodeImgArray[projCodeImgArray.length - 1];
+        projNumber = projCodeImgArray.length - 1;
+    }
 })
 
 button5.addEventListener('click', () =>{
