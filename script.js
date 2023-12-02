@@ -90,9 +90,9 @@ button4.className="button4";
 let p1Title="Interactive Cover Letter";
 let p1Description="This project is my attempt to stand out to potential employers.  While I will continue to submit cover letters, for someone who wants a break from the usual, they can click the link and learn a little about me, while also seeing my work in action.  This was also a chance for me to practice DOM manipulation and CSS animations. The biggest challenges in this project have been getting the Drag and Drop feature to behave exactly as I want it and also the responsiveness. This project page was inspired by how Home Depot displays their Core Values and I really enjoyed coming up with the JS code to switch back and forth between projects."
 let p1Image="./imgs/cvScreen.png";
-let p1link1="https://github.com/PBadila/coverLetterHomeDepot";
+let p1link1="https://github.com/PBadila/coverLetterDiscord";
 let p1link1Inner="GitHub"
-let p1Live="https://cvhomedepot.onrender.com";
+let p1Live="https://cvdiscord.onrender.com";
 
 let p2Title="Personal Blog";
 let p2Description="The goal of this blog was to document my journey from the end of bootcamp to getting a job as a Software Engineer. I used this project to practice creating a database and get comfortable with React. I encountered a few obstacles, all which I actually chronicled in the blog, such as password protection and being able to edit a post. Another issue, one that I keep encountering, is getting the info from the API's to show up on the web page.  I think this may be an issue with the host that I am using, but the work around is to have the LOADING... message. If you encounter it, wait awhile, trust me - it will load eventually.";
