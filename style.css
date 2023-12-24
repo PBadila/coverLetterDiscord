@@ -146,12 +146,12 @@ body{
 
 .textBox{
     width:60%;
-    height:45%;
+    height:40%;
     position:relative;
     /* top:30%;
     left:6%; */
     align-self:center;
-    font-size:60%;
+    font-size:40%;
 }
 
 .clickBox{
